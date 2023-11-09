@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/vetcardio/static/js/main.7545ccdc.js",
+    "static/js/498.7b823c50.chunk.js": "/vetcardio/static/js/498.7b823c50.chunk.js",
+    "static/js/703.3cbf44b3.chunk.js": "/vetcardio/static/js/703.3cbf44b3.chunk.js",
+    "static/js/379.35694e02.chunk.js": "/vetcardio/static/js/379.35694e02.chunk.js",
+    "index.html": "/vetcardio/index.html",
+    "main.7545ccdc.js.map": "/vetcardio/static/js/main.7545ccdc.js.map",
+    "498.7b823c50.chunk.js.map": "/vetcardio/static/js/498.7b823c50.chunk.js.map",
+    "703.3cbf44b3.chunk.js.map": "/vetcardio/static/js/703.3cbf44b3.chunk.js.map",
+    "379.35694e02.chunk.js.map": "/vetcardio/static/js/379.35694e02.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7545ccdc.js"
+  ]
+}
