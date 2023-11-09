@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function InformacionPaciente({ onGuardarInformacion }) {
   const [formData, setFormData] = useState({
@@ -26,17 +27,22 @@ function InformacionPaciente({ onGuardarInformacion }) {
   };
 
   return (
-    <div>
+    <div className='form-group'>
       <h2>1. INFORMACION DEL PACIENTE:</h2>
-      <fieldset>
-        <legend>PACIENTE</legend>
-        <label>PACIENTE:</label>
-        <input
-          type="text"
-          name="paciente"
-          value={formData.paciente}
-          onChange={handleChange}
-        />
+      
+        <fieldset className="mb-4">
+          <legend>PACIENTE</legend>
+          <div className="mb-3">
+            <label htmlFor="paciente" className="form-label">PACIENTEEE:</label>
+            <input
+              type="text"
+              className="form-control"
+              id="paciente"
+              name="paciente"
+              value={formData.paciente}
+              onChange={handleChange}
+            />
+          </div>
         <label>FECHA DE MEDICIÓN:</label>
         <input
           type="text"
