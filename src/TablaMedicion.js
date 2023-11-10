@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
-function TablaMedicion({ onGuardarTablaMedicion }) {
+const TablaMedicion = ({ onGuardarTablaMedicion }) => {
   const [mediciones, setMediciones] = useState([
+    { pas: '', pad: '', pam: '', fc: '' },
+    { pas: '', pad: '', pam: '', fc: '' },
+    { pas: '', pad: '', pam: '', fc: '' },
     { pas: '', pad: '', pam: '', fc: '' },
     { pas: '', pad: '', pam: '', fc: '' },
     { pas: '', pad: '', pam: '', fc: '' },
@@ -26,12 +29,10 @@ function TablaMedicion({ onGuardarTablaMedicion }) {
     return promedio.toFixed(1);
   };
 
-  
-
   return (
-    <div>
-      <h2>3. TABLA DE MEDICIÓN:</h2>
-      <table>
+    <div className="container">
+      <h2 className="mb-4">3. TABLA DE MEDICIÓN:</h2>
+      <table className="table">
         <thead>
           <tr>
             <th></th>
@@ -42,52 +43,54 @@ function TablaMedicion({ onGuardarTablaMedicion }) {
           </tr>
         </thead>
         <tbody>
-  {mediciones.map((medida, index) => (
-    <tr key={index}>
-      <td>{index + 1}.</td>
-      <td>
-        <input
-          type="number"
-          value={medida.pas}
-          onChange={(e) => handleChange(e, index, 'pas')}
-        />
-      </td>
-      <td>
-        <input
-          type="number"
-          value={medida.pad}
-          onChange={(e) => handleChange(e, index, 'pad')}
-        />
-      </td>
-      <td>
-        <input
-          type="number"
-          value={medida.pam}
-          onChange={(e) => handleChange(e, index, 'pam')}
-        />
-      </td>
-      <td>
-        <input
-          type="number"
-          value={medida.fc}
-          onChange={(e) => handleChange(e, index, 'fc')}
-        />
-      </td>
-    </tr>
-  ))}
-  <tr>
-    <td>PROMEDIO</td>
-    <td>{calcularPromedio('pas')}</td>
-    <td>{calcularPromedio('pad')}</td>
-    <td>{calcularPromedio('pam')}</td>
-    <td>{calcularPromedio('fc')}</td>
-  </tr>
-</tbody>
-
+          {mediciones.map((medida, index) => (
+            <tr key={index}>
+              <td>{index + 1}.</td>
+              <td>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={medida.pas}
+                  onChange={(e) => handleChange(e, index, 'pas')}
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={medida.pad}
+                  onChange={(e) => handleChange(e, index, 'pad')}
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={medida.pam}
+                  onChange={(e) => handleChange(e, index, 'pam')}
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  className="form-control"
+                  value={medida.fc}
+                  onChange={(e) => handleChange(e, index, 'fc')}
+                />
+              </td>
+            </tr>
+          ))}
+          <tr>
+            <td>PROMEDIO</td>
+            <td>{calcularPromedio('pas')}</td>
+            <td>{calcularPromedio('pad')}</td>
+            <td>{calcularPromedio('pam')}</td>
+            <td>{calcularPromedio('fc')}</td>
+          </tr>
+        </tbody>
       </table>
-    
     </div>
   );
-}
+};
 
 export default TablaMedicion;
