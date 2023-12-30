@@ -10,10 +10,6 @@ const TablaMedicion = ({ onGuardarTablaMedicion }) => {
     { pas: '', pad: '', pam: '', fc: '' },
     { pas: '', pad: '', pam: '', fc: '' },
     { pas: '', pad: '', pam: '', fc: '' },
-    { pas: '', pad: '', pam: '', fc: '' },
-    { pas: '', pad: '', pam: '', fc: '' },
-    { pas: '', pad: '', pam: '', fc: '' },
-    { pas: '', pad: '', pam: '', fc: '' },
   ]);
 
   const handleChange = (e, rowIndex, columnName) => {
